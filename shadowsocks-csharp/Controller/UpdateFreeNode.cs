@@ -42,7 +42,6 @@ namespace Shadowsocks.Controller
                     http.Proxy = null;
                 }
                 //UseProxy = !UseProxy;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
                 http.DownloadStringCompleted += http_DownloadStringCompleted;
                 http.DownloadStringAsync(new Uri(URL != null ? URL : UpdateURL));
             }
